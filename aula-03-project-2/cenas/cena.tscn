@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxeh7patlcihk"]
+
+[ext_resource type="Script" uid="uid://crb7hbyc6imvu" path="res://cenas/cena.gd" id="1_05vcp"]
+[ext_resource type="PackedScene" uid="uid://gy8s5k8s2bke" path="res://cenas/cubo_morte.tscn" id="2_ruynp"]
+[ext_resource type="PackedScene" uid="uid://by5xp5xwj7we5" path="res://cenas/cubo_godot.tscn" id="3_ncfgq"]
+
+[sub_resource type="Environment" id="Environment_vtfti"]
+
+[node name="Raiz" type="Node3D"]
+script = ExtResource("1_05vcp")
+CuboMorte = ExtResource("2_ruynp")
+CuboPadrao = ExtResource("3_ncfgq")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+environment = SubResource("Environment_vtfti")
+current = true

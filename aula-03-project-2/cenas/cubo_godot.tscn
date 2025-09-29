@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://by5xp5xwj7we5"]
+
+[ext_resource type="Material" uid="uid://bknmy226egao4" path="res://materiais/material2.tres" id="1_acg3w"]
+
+[node name="CuboGodot" type="CSGBox3D"]
+material_override = ExtResource("1_acg3w")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://gy8s5k8s2bke"]
+
+[ext_resource type="Material" uid="uid://bgb541jbuqhmb" path="res://materiais/caveira.tres" id="1_bkikq"]
+
+[node name="CuboMorte" type="CSGBox3D"]
+material_override = ExtResource("1_bkikq")
