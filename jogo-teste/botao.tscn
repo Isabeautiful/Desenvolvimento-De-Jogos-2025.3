@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtgebegxwt43c"]
+
+[ext_resource type="Script" uid="uid://bg0l7fv1frqnt" path="res://node.gd" id="1_eqktc"]
+[ext_resource type="Texture2D" uid="uid://5nhq3jouqtl5" path="res://icon.svg" id="2_c5svr"]
+
+[sub_resource type="Gradient" id="Gradient_7q83k"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fibom"]
+gradient = SubResource("Gradient_7q83k")
+fill = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xthxt"]
+size = Vector2(122, 118)
+
+[node name="Node" type="Area2D"]
+script = ExtResource("1_eqktc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_c5svr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-1.000001, 1.2814999e-06)
+scale = Vector2(1.7812499, 1.84375)
+color = Color(1, 0.13725491, 1, 1)
+texture = SubResource("GradientTexture2D_fibom")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_xthxt")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

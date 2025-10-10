@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://da1siodac1n4s"]
+
+[ext_resource type="PackedScene" uid="uid://dtgebegxwt43c" path="res://botao.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://dfdf7snqhipx8" path="res://game.gd" id="1_e2o6t"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_e2o6t")
+
+[node name="Node" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(424, 238)
+
+[node name="PointLight2D" parent="Node" index="2"]
+color = Color(0.13999999, 1, 0.1543333, 1)
+
+[node name="Node2" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(626, 239)
+
+[node name="PointLight2D" parent="Node2" index="2"]
+color = Color(1, 0.13999999, 0.15433311, 1)
+
+[node name="Node3" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(415, 421)
+
+[node name="PointLight2D" parent="Node3" index="2"]
+color = Color(1, 0.5556667, 0.13999999, 1)
+
+[node name="Node4" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(625, 428)
+
+[editable path="Node"]
+[editable path="Node2"]
+[editable path="Node3"]
